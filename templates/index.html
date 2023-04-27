@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <section class="home bubble">
+    <section class="home">
+     
             <div class="home-left img-fluid">
                 <img src="static/Images/image.png" alt="your image description">
             </div>
@@ -22,20 +23,17 @@
                 <div class="text-container"> 
                     <h1>Welcome to my portfolio! </h1>
                     <h1 class="mt-3 ">I am Mahesh.</h1>
-            </div> 
+                </div> 
                 <p>I’m a dreamer, writer and storyteller, who loves to solve problems.
                    <p> I work on human behaviour, identity and relationships.</p>
                 <p>I find unique ways to help you find your brand voice, establish your niche & bring clarity and elegance to your personality and help you achieve your career goals.</p>
             </div>
+            
         </section>
-        
-        <div class="below-main">
-                <img src="static/images/lwm.png" alt="work">
-        </div>
 
 <!-- ************ life - section ************* -->
 <section class="life-section">
-    <div class="life-class" style="position:relative;background-color:#CCCCFF;min-height:63vh">
+    <div class="life-class" style="position:relative;background-color:#ccffd2;;min-height:63vh">
         <div class="flex-box life">
             <div class="img-left" data-aos="fade-left" data-aos-offset="200">
                 <img src="static/images/life.png" alt="">
@@ -60,7 +58,7 @@
 
 <!-- ***************** work - section ************* -->
 <section class="work-section">
-    <div class="work-class" style="position:relative;background-color:#ccffd2;min-height:60vh">
+    <div class="work-class" style="position:relative;background-color:#CCCCFF;min-height:60vh">
         <div class="fb2 work">
             <div class="img-right" data-aos="fade-right" data-aos-offset="200">
                 <img src="static/images/work2.png" alt="">
@@ -71,11 +69,6 @@
                 <p class="text">I began my career in sales. Leveraging my expertise in scouting talent, I then shifted to the dynamic industry of Recruiting. Having met over 40,000 candidates and hired hundreds of them, I learnt the recruitment industry in and out.
                 </p>
             </div>
-
-            <!-- <div class="extra-cont">
-                Having had the privilege of pitching to top CEO’s, interviewing multiple “C - Level “ executives, I noticed a gap… A big gap. The paucity of time. (Think of an image, 
-
-            </div> -->
             
         </div>
 
@@ -89,41 +82,47 @@
     </div>
 </section>
 
-<!--****************  music section **************** -->
-<section class="music-section">
-    <div class="music-class" style="position:relative;background-color:#e0a96d;min-height:50vh">
-        <div class="flex-box music">
-            <div class="img-left" data-aos="fade-left" data-aos-offset="200">
-                <img src="static/images/music.png" alt="">
-                <p class="text">I've always been someone who derives my grit and inspiration from music, especially Metal music and Rock music from the 70’s, 80s and 90s. With my ventures right now, I am trying to pass on the same to everyone between the ages of 5 to 55 through stories and illustrations.
-                </p>
+<!-- ***** Mentoons toonland prop story******** -->
+<section class="ment-toon">
+    <div class="flex-box">
+        <div class="mentoon-toonland" id="mentoon-toonland">
+            <img src="static/images/logo.png" alt="" width="496px" height="170px">
+            <div class="content-men-toon">
+            <h1>Mentoons</h1>
+            <p>We at Mentoons are here to mentor through cartoons! Focusing on concepts such as social human development, social media de-addiction</p>
+            <a href=""><button class="mt-btn mb-2">Explore</button> </a>
+            </div>
+        </div>
 
-                <button class="music-btn" id="mb" onclick="musicfun()">Explore</button>
-            </div>
+        <div class="mentoon-toonland">
+            <img src="static/images/tooland.png" alt="" height="170px">
+            <div class="content-men-toon">
+            <h1>Toonland</h1>
+            <p>Toonland, a fun, entertaining, learning platform designed specially for kids between the ages of 6 - 12 years! With amazing illustrated stories.</p>
+            <button class="mt-btn mb-2">Explore</button>
             
-            <div class="img-right" data-aos="fade-right" data-aos-offset="200">
-                <img src="static/images/i3.png" alt="">
             </div>
-        
+        </div>
+
+        <div class="mentoon-toonland">
+            <img src="static/images/ps.png" alt="" height="170px">
+            <div class="content-men-toon">
+            <h1>Propelling Stories</h1>
+            <p> Through this we help individuals to revamp their personal / digital presence through websites and social media strategies.
+            </p>
+            <button class="mt-btn mb-2">Explore</button>
+
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="more-music" id="photos">
-    <div class="image-flex-box">
-        <img src="static/images/music-images/img1.jpeg" alt="">
-        <img src="static/images/music-images/img2.jpeg" alt="img 2">
-        <img src="static/images/music-images/img3.jpeg" alt="img 3">
-        <img src="static/images/music-images/img4.jpeg" alt="img 4">
-        <img src="static/images/music-images/img5.jpeg" alt="img 5">
-        <img src="static/images/music-images/img6.jpeg" alt="img 6">
-        <img src="static/images/music-images/img7.jpeg" alt="img 7">
-        <img src="static/images/music-images/img8.jpeg" alt="img 8">
-        <img src="static/images/music-images/img9.jpeg" alt="img 9">
-      </div>
-</section>
+<div class="more-work-btn">
+    <button onclick="show()">More Work</button>
+</div>
 
 <!-- ****************** more work section ************** -->
-<section class="more-work mt-5">
+<section class="more-work mt-5" id="hidden">
     <div class="cxo text-center">
         <img src="static/images/cxo.png" alt="">
 
@@ -186,53 +185,54 @@
             </div>
         </div>
 
-
-
         </div>
     </div>
 
     </div>
+    </div>
+
+    <div class="close-btn m-3 text-center">
+        <button type="button" class="btn btn-info p-2" onclick="hide()">Close</button>
     </div>
 </section>
 
-<div class="more-work-btn">
-    <button onclick="myfun()">More Work</button>
-</div>
+<!--****************  music section **************** -->
+<section class="music-section mb-0">
+    <div class="music-class" style="position:relative;background-color:#e0a96d;min-height:50vh">
+        <div class="flex-box music">
+            <div class="img-left" data-aos="fade-left" data-aos-offset="200">
+                <img src="static/images/music.png" alt="">
+                <p class="text">I've always been someone who derives my grit and inspiration from music, especially Metal music and Rock music from the 70’s, 80s and 90s. With my ventures right now, I am trying to pass on the same to everyone between the ages of 5 to 55 through stories and illustrations.
+                </p>
 
-
-<section class="ment-toon" id="hidden">
-    <div class="flex-box">
-        <div class="mentoon-toonland" id="mentoon-toonland">
-            <img src="static/images/logo.png" alt="" width="496px" height="170px">
-            <div class="content-men-toon">
-            <h1>Mentoons</h1>
-            <p>We at Mentoons are here to mentor through cartoons! Focusing on concepts such as social human development, social media de-addiction</p>
-            <a href=""><button class="mt-btn mb-2">Explore</button> </a>
+                <button class="music-btn" id="mb" onclick="musicfun()">Explore</button>
             </div>
-        </div>
-
-        <div class="mentoon-toonland">
-            <img src="static/images/tooland.png" alt="" height="170px">
-            <div class="content-men-toon">
-            <h1>Toonland</h1>
-            <p>Toonland, a fun, entertaining, learning platform designed specially for kids between the ages of 6 - 12 years! With amazing illustrated stories.</p>
-            <button class="mt-btn mb-2">Explore</button>
             
+            <div class="img-right" data-aos="fade-right" data-aos-offset="200">
+                <img src="static/images/i3.png" alt="">
             </div>
-        </div>
-
-        <div class="mentoon-toonland">
-            <img src="static/images/ps.png" alt="" height="170px">
-            <div class="content-men-toon">
-            <h1>Propelling Stories</h1>
-            <p> Through this we help individuals to revamp their personal / digital presence through websites and social media strategies.
-            </p>
-            <button class="mt-btn mb-2">Explore</button>
-
-            </div>
-        </div>
+        
     </div>
 </section>
+
+<section class="more-music mt-0" id="photos">
+    <div class="image-flex-box">
+        <img src="static/images/music-images/img1.jpeg" alt="">
+        <img src="static/images/music-images/img2.jpeg" alt="img 2">
+        <img src="static/images/music-images/img3.jpeg" alt="img 3">
+        <img src="static/images/music-images/img4.jpeg" alt="img 4">
+        <img src="static/images/music-images/img5.jpeg" alt="img 5">
+        <img src="static/images/music-images/img6.jpeg" alt="img 6">
+        <img src="static/images/music-images/img7.jpeg" alt="img 7">
+        <img src="static/images/music-images/img8.jpeg" alt="img 8">
+        <img src="static/images/music-images/img9.jpeg" alt="img 9">
+      </div>
+      <div class="close-btn m-3 text-center float-right">
+        <button type="button" class="btn btn-light p-2 float-right" onclick="musichide()">Close</button>
+    </div>
+</section>
+
+
 
 <!-- *************** contact me ******************* -->
 <div class="contact mt-5">
@@ -287,6 +287,7 @@
     </div>
 </div>
 
+<!-- ******* footer ************** -->
 <footer>
     <div class="bg-dark text-center text-light p-3 mt-3">
         &copy; Copyright 2021 Mentor Mahesh
@@ -301,3 +302,4 @@
   </script>
 </body>
 </html>
+
